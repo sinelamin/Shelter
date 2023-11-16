@@ -2,6 +2,7 @@
 @import 'style/fonts';
 @import 'style/var';
 @import 'style/style';
+@import 'style/ourPets';
 
 html {
   box-sizing: border-box;
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Georgia';
 }
 
 button {
@@ -31,4 +32,10 @@ a {
 
 ul {
   list-style: none;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1280px;
+  padding: 0 40px;
 }

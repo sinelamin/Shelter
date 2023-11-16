@@ -1,0 +1,82 @@
+.header {
+  padding: 30px 40px 0;
+  background-image: url('img/header_bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  &-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 90px;
+    height: 60px;
+  }
+  
+  &-logo {
+    font-size: 32px;
+    font-weight: $mainFontWeight;
+    line-height: 110%;
+    letter-spacing: 1.92px;
+    color: $interactiveElemColor;
+  }
+  
+  &-logo__sub {
+    display: block;
+    font-family: Arial;
+    font-size: 13px;
+    letter-spacing: 1.3px;
+    color: #fff;
+  }
+  
+  &-menu {
+    display: flex;
+    color: #CDCDCD;
+    height: 27px;
+  }
+  
+  &-menu__item:first-child {
+    color: #FAFAFA;
+    border-bottom: 3px solid $interactiveElemColor;
+  }
+  
+  &-menu__item + &-menu__item {
+    padding-left: 35px;
+  }
+  
+  &-bottom {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &-content {
+    padding-top: 163px;
+    max-width: 460px;
+  }
+  
+  &-title {
+    margin-bottom: 42px;
+    max-width: 310px;
+    font-size: 44px;
+    font-weight: $mainFontWeight;
+    line-height: 130%;
+    color: #fff;
+  }
+  
+  &-descr {
+    margin-bottom: 42px;
+    font-size: $mainDescrSize;
+    font-weight: $mainFontWeight;
+    line-height: 160%;
+    color: #CDCDCD;
+  }
+  
+  &-btn {
+    padding: 15px 45px;
+    border-radius: 100px;
+    background-color: $interactiveElemColor;
+    font-size: 17px;
+    font-weight: $mainFontWeight;
+    line-height: 130%;
+    color: #292929;
+  }
+}

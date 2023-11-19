@@ -1,0 +1,41 @@
+.header--ourPets {
+  padding: 30px 0 30px;
+  background-image: none;
+}
+
+.header-top--ourPets {
+  margin: 0;
+}
+
+.header-logo--ourPets {
+  color: $mainTextColor;
+}
+
+.header-logo__sub--ourPets {
+  color: $btnTextColor;
+}
+
+.header-list--ourPets {
+  color: $mainTextColor;
+}
+
+.header-list__item--ourPets:first-child {
+  color: $mainTextColor;
+  border-bottom: none;
+}
+
+.header-list__item--ourPets:nth-child(2) {
+  color: $btnTextColor;
+  border-bottom: 3px solid $interactiveElemColor;
+}
+
+.header-list__item--ourPets:hover {
+  color: $btnTextColor;
+  transition: color .5s;
+}
+
+.slider-list--ourPets {
+  display: grid;
+  grid-template-columns: repeat(4, 270px);
+  gap: 40px 30px;
+}

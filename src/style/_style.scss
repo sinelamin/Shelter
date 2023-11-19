@@ -32,15 +32,20 @@
     display: flex;
     color: #CDCDCD;
     height: 27px;
+  }
 
-    &__item:first-child {
-      color: #FAFAFA;
-      border-bottom: 3px solid $interactiveElemColor;
-    }
+  &-list__item:first-child {
+    color: #FAFAFA;
+    border-bottom: 3px solid $interactiveElemColor;
+  }
 
-    &__item+&__item {
-      margin-left: 35px;
-    }
+  &-list__item+&-list__item {
+    margin-left: 35px;
+  }
+
+  &-list__item:hover {
+    color: $hoverTextColor;
+    transition: color .5s;
   }
 
   &-bottom {
@@ -77,6 +82,11 @@
       font-weight: $mainFontWeight;
       line-height: 130%;
       color: $btnTextColor;
+    }
+
+    &__btn:hover {
+      background-color: $hoverInteractiveElemColor;
+      transition: background-color .5s;
     }
   }
 }
@@ -175,6 +185,14 @@
       letter-spacing: 1.02px;
     }
 
+    &-card__btn:hover {
+      border: 2px solid $hoverInteractiveElemColor;
+      background-color: $hoverInteractiveElemColor;
+      transition: background-color .5s;
+    }
+
+    
+
     &-arrow {
       position: relative;
       display: inline-flex;
@@ -189,6 +207,12 @@
       top: -250px;
     }
 
+    &-arrow:hover {
+      border: 2px solid $hoverInteractiveElemColor;
+      background-color: $hoverInteractiveElemColor;
+      transition: background-color .5s;
+    }
+
     &-arrow__left {
       left: -50%;
       transform: translateX(25%);
@@ -197,6 +221,10 @@
     &-arrow__right {
       left: 50%;
       transform: translateX(-25%);
+    }
+
+    &-arrow__img {
+      transform: translateY(-25%);
     }
   }
 
@@ -208,6 +236,11 @@
     font-weight: $mainFontWeight;
     line-height: 130%;
     letter-spacing: 1.02px;
+  }
+
+  &__btn:hover {
+    background-color: $hoverInteractiveElemColor;
+    transition: background-color .5s;
   }
 }
 
@@ -303,6 +336,11 @@
     border-radius: 9px;
   }
 
+  &-requisites:hover {
+    background-color: $hoverInteractiveElemColor;
+    transition: background-color .5s;
+  }
+
   &-requisites__img {
     margin-right: 15px;
   }
@@ -388,19 +426,4 @@
     letter-spacing: 2.1px;
     color: #fff;
   }
-
-
-
-
-  // &-content__item {
-  //   display: flex;
-  //   flex-direction: column;
-  //   justify-content: space-between;
-  //   height: 160px;
-  // }
-
-  // &-icon__img {
-  //   margin-right: 20px;
-  //   height: 32px;
-  // }
 }

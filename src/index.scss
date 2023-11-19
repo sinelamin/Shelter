@@ -6,6 +6,7 @@
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -17,6 +18,10 @@ html {
 body {
   font-family: 'Georgia';
   color: $mainTextColor;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
 }
 
 button {

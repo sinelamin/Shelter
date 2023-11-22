@@ -92,7 +92,7 @@
 }
 
 .about {
-  padding: 80px 0 100px;
+  padding: $paddingSection;
 
   &-wrapper {
     display: flex;
@@ -113,6 +113,10 @@
       letter-spacing: 2.1px;
     }
 
+    &__subtitle {
+      display: block;
+    }
+
     &__descr {
       font-family: Arial;
       font-size: 15px;
@@ -124,7 +128,7 @@
 }
 
 .pets {
-  padding: 80px 0 100px;
+  padding: $paddingSection;
   background-color: $secondBgColor;
 
   &-wrapper {
@@ -190,7 +194,7 @@
       transition: background-color .5s;
     }
 
-    
+
 
     &-arrow__left,
     &-arrow__right {
@@ -293,7 +297,7 @@
 }
 
 .donation {
-  padding: 80px 0 100px;
+  padding: $paddingSection;
   background-color: $secondBgColor;
 
   &-wrapper {
@@ -427,5 +431,16 @@
     line-height: 130%;
     letter-spacing: 2.1px;
     color: #fff;
+  }
+}
+
+@media (max-width: 550px) {
+  $mainTitleSize: 25px;
+
+  .pets {
+
+    &__title {
+      font-size: $mainTitleSize;
+    }
   }
 }

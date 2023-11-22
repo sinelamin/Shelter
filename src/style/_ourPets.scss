@@ -1,0 +1,126 @@
+.header--OurPets {
+  padding: 30px 0 30px;
+  background-image: none;
+
+  .header-top {
+    margin: 0;
+  }
+
+  .header-logo {
+    color: $mainTextColor;
+  }
+
+  .header-logo__sub {
+    color: $btnTextColor;
+  }
+
+  .header-list {
+    color: $mainTextColor;
+  }
+
+  .header-list__item:first-child {
+    color: $mainTextColor;
+    border-bottom: none;
+  }
+
+  .header-list__item:nth-child(2) {
+    color: $btnTextColor;
+    border-bottom: 3px solid $interactiveElemColor;
+  }
+
+  .header-list__item:hover {
+    color: $btnTextColor;
+    transition: color .5s;
+  }
+}
+
+.pets--ourPets {
+  .paginator {
+    height: auto;
+    padding: 0;
+
+    &-list {
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-bottom: 15px;
+      max-width: 100%;
+
+      &__card {
+        margin-bottom: 30px;
+        background-color: #FAFAFA;
+      }
+    }
+
+    &-card__img {
+      margin-bottom: 30px;
+    }
+
+    &-card__title {
+      margin-top: 0;
+      margin-bottom: 30px;
+      font-size: 20px;
+      font-weight: $mainFontWeight;
+      letter-spacing: 1.2px;
+    }
+
+    &-card__btn {
+      padding: 12px 42px;
+      border-radius: 100px;
+      border: 2px solid $interactiveElemColor;
+      color: $btnTextColor;
+      font-size: 17px;
+      font-weight: $mainFontWeight;
+      line-height: 130%;
+      letter-spacing: 1.02px;
+    }
+
+    &-card__btn:hover {
+      border: 2px solid $hoverInteractiveElemColor;
+      background-color: $hoverInteractiveElemColor;
+      transition: background-color .5s;
+    }
+
+    &-navigation {
+      display: flex;
+      justify-content: center;
+    }
+
+    &-btn__superleft,
+    &-btn__left,
+    &-number,
+    &-btn__right,
+    &-btn__superright {
+      display: inline-flex;
+      margin: 0 10px;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      padding: 23px 23px;
+      border: 2px solid $interactiveElemColor;
+      border-radius: 50%;
+      font-size: 20px;
+      font-weight: $mainFontWeight;
+      line-height: 115%;
+      letter-spacing: 1.2px;
+      cursor: pointer;
+    }
+
+    &-number {
+      background-color: $interactiveElemColor;
+      cursor: default;
+    }
+
+    &-btn__superleft:hover,
+    &-btn__left:hover,
+    &-btn__right:hover,
+    &-btn__superright:hover {
+      border: 2px solid $hoverInteractiveElemColor;
+      background-color: $hoverInteractiveElemColor;
+      transition: background-color .5s;
+    }
+  }
+}

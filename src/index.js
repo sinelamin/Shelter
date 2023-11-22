@@ -1,4 +1,4 @@
 import './index.html';
-import './pages/pageTwo/page.html';
+import './ourPets.html';
 import './index.scss';
-import './pages/pageTwo/page.js';
+import './components/burger.js';

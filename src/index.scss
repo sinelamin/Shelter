@@ -2,9 +2,11 @@
 @import 'style/fonts';
 @import 'style/var';
 @import 'style/style';
+@import 'style/ourPets';
 
 html {
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -14,7 +16,12 @@ html {
 }
 
 body {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Georgia';
+  color: $mainTextColor;
+}
+
+body::-webkit-scrollbar {
+  width: 0px;
 }
 
 button {
@@ -31,4 +38,11 @@ a {
 
 ul {
   list-style: none;
+  padding: 0;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1280px;
+  padding: 0 40px;
 }

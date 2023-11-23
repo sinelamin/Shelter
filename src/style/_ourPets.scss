@@ -125,3 +125,18 @@
     }
   }
 }
+
+@media (max-width: 1159px) {
+  .pets--ourPets {
+    .paginator {
+      &-list {
+        justify-content: space-evenly;
+      }
+
+      &-list__card:nth-child(8),
+      &-list__card:nth-child(7) {
+        display: none;
+      }
+    }
+  }
+}

@@ -66,6 +66,7 @@
     }
 
     &-card__btn {
+      margin-bottom: 30px;
       padding: 12px 42px;
       border-radius: 100px;
       border: 2px solid $interactiveElemColor;
@@ -121,6 +122,21 @@
       border: 2px solid $hoverInteractiveElemColor;
       background-color: $hoverInteractiveElemColor;
       transition: background-color .5s;
+    }
+  }
+}
+
+@media (max-width: 1159px) {
+  .pets--ourPets {
+    .paginator {
+      &-list {
+        justify-content: space-evenly;
+      }
+
+      &-list__card:nth-child(8),
+      &-list__card:nth-child(7) {
+        display: none;
+      }
     }
   }
 }

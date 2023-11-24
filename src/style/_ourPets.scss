@@ -57,6 +57,7 @@
         margin-bottom: 30px;
         width: 270px;
         background-color: #FAFAFA;
+        border-radius: 9px;
       }
     }
 
@@ -144,6 +145,14 @@
       &-list__card:nth-child(7) {
         display: none;
       }
+    }
+  }
+}
+
+@media (max-width: 750px) {
+  .header--OurPets {
+    .header-list {
+      background-color: #fff;
     }
   }
 }

@@ -1,0 +1,52 @@
+{
+  "cards": [
+    {
+      "id": "0",
+      "img": "./img/katrine.png",
+      "title": "Katrine",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "1",
+      "img": "./img/jennifer.png",
+      "title": "Jennifer",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "2",
+      "img": "./img/woody.png",
+      "title": "Woody",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "3",
+      "img": "./img/sophia.png",
+      "title": "Sophia",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "4",
+      "img": "./img/timmy.png",
+      "title": "Timmy",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "5",
+      "img": "./img/charly.png",
+      "title": "Charly",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "6",
+      "img": "./img/scarlett.png",
+      "title": "Scarlett",
+      "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "7",
+      "img": "./img/freddie.png",
+      "title": "Freddie",
+      "descr": "Lorem Ipsum has been the industry"
+    }
+  ]
+}

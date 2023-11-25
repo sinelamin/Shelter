@@ -2,49 +2,57 @@
   "cards": [
     {
       "id": "0",
-      "img": "./img/katrine.png",
+      "img": "katrine.png",
+      "alt": "cat-katrine",
       "title": "Katrine",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "1",
-      "img": "./img/jennifer.png",
+      "img": "jennifer.png",
+      "alt": "dog-jennifer",
       "title": "Jennifer",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "2",
-      "img": "./img/woody.png",
+      "img": "woody.png",
+      "alt": "dog-woody",
       "title": "Woody",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "3",
-      "img": "./img/sophia.png",
+      "img": "sophia.png",
+      "alt": "dog-sophia",
       "title": "Sophia",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "4",
-      "img": "./img/timmy.png",
+      "img": "timmy.png",
+      "alt": "cat-timmy",
       "title": "Timmy",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "5",
-      "img": "./img/charly.png",
+      "img": "charly.png",
+      "alt": "dog-charly",
       "title": "Charly",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "6",
-      "img": "./img/scarlett.png",
+      "img": "scarlett.png",
+      "alt": "dog-scarlett",
       "title": "Scarlett",
       "descr": "Lorem Ipsum has been the industry"
     },
     {
       "id": "7",
-      "img": "./img/freddie.png",
+      "img": "freddie.png",
+      "alt": "cat-freddie",
       "title": "Freddie",
       "descr": "Lorem Ipsum has been the industry"
     }

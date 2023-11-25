@@ -199,11 +199,13 @@
     &-list {
       margin: 0 auto;
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       max-width: 990px;
+      overflow: hidden;
     }
 
     &-list__card {
+      margin-right: 90px;
       height: 435px;
       background-color: #FAFAFA;
       border-radius: 9px;
@@ -493,9 +495,9 @@
         justify-content: space-evenly;
       }
 
-      &-list__card:last-child {
-        display: none;
-      }
+      // &-list__card:last-child {
+      //   display: none;
+      // }
     }
   }
 }
@@ -698,9 +700,9 @@
     }
 
     .slider {
-      &-list__card:nth-child(2) {
-        display: none;
-      }
+      // &-list__card:nth-child(2) {
+      //   display: none;
+      // }
     }
   }
 

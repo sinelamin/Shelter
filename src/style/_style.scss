@@ -192,7 +192,6 @@
   }
 
   .slider {
-    // padding: 0 40px;
     overflow: hidden;
     margin: 0 auto 10px;
     max-width: 1080px;
@@ -200,21 +199,15 @@
     &-list {
       margin: 0 auto;
       display: flex;
-      // max-width: 990px;
     }
 
     &-list__card {
       margin: 0 45px 0;
-      // margin-right: 90px;
       min-width: 270px;
       height: 435px;
       background-color: #FAFAFA;
       border-radius: 9px;
     }
-
-    // .slider-list__card + .slider-list__card {
-    //   margin-left: 90px;
-    // }
 
     &-card__img {
       margin-bottom: 30px;
@@ -222,6 +215,7 @@
       height: 270px;
       object-fit: cover;
       object-position: top;
+      border-radius: 9px 9px 0 0;
     }
 
     &-card__title {
@@ -275,12 +269,10 @@
 
     &-arrow__left {
       left: -47.5%;
-      // transform: translateX(-47.5%);
     }
 
     &-arrow__right {
       left: 47.5%;
-      // transform: translateX();
     }
 
     &-arrow__img {

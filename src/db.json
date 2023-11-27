@@ -55,6 +55,13 @@
       "alt": "cat-freddie",
       "title": "Freddie",
       "descr": "Lorem Ipsum has been the industry"
+    },
+    {
+      "id": "8",
+      "img": "katrine.png",
+      "alt": "cat-katrine",
+      "title": "Katrine",
+      "descr": "Lorem Ipsum has been the industry"
     }
   ]
 }

@@ -3,26 +3,7 @@
 //Infinite random slider
 
 import db from '../db.json';
-
-const createCard = (parent, img, alt, title, dataAttribute, boolean = true) => {
-  const card = document.createElement('div');
-
-  card.classList.add('slider-list__card');
-  card.setAttribute('data-id', dataAttribute);
-  card.innerHTML = `
-  <img class="slider-card__img" src="${img}" alt="${alt}">
-  <h4 class="slider-card__title">${title}</h4>
-  <button class="slider-card__btn">Learn more</button>
-  `
-
-  if (boolean) {
-    parent.append(card);
-  } else {
-    parent.prepend(card);
-  }
-
-  // parent.append(card);
-};
+import { createCard } from './createCard';
 
 const renderCards = (parent) => {
   db.cards.forEach(({ img, alt, title, id }) => {
@@ -30,7 +11,7 @@ const renderCards = (parent) => {
 
     const imgHash = require(`../img/${imgFilename}`);
 
-    createCard(parent, imgHash, alt, title, id);
+    createCard('slider-card', parent, imgHash, alt, title, id);
   });
 };
 
@@ -89,11 +70,11 @@ const addNewCards = async (step, sliderList, position) => {
 
   if (position != 0) { // напрвление право
     for (let i = step; i < (step * 2); i += 1) {
-      arr.push(+document.querySelectorAll('.slider-list__card')[i].getAttribute('data-id'));
+      arr.push(+document.querySelectorAll('.slider-card')[i].getAttribute('data-id'));
     }
   } else {
     for (let i = 0; i < step; i += 1) { // напрвление лево
-      arr.push(+document.querySelectorAll('.slider-list__card')[i].getAttribute('data-id'));
+      arr.push(+document.querySelectorAll('.slider-card')[i].getAttribute('data-id'));
     }
   }
 
@@ -107,6 +88,7 @@ const addNewCards = async (step, sliderList, position) => {
     const imgHash = require(`../img/${imgFilename}`);
 
     createCard(
+      'slider-card',
       sliderList,
       imgHash,
       db.cards[newRandomArr[i]].alt,
@@ -153,7 +135,7 @@ renderCards(sliderList);
 const slider = document.querySelector('.slider');
 const arrowleft = document.querySelector('.slider-arrow__left');
 const arrowRight = document.querySelector('.slider-arrow__right');
-const cards = document.querySelectorAll('.slider-list__card');
+const cards = document.querySelectorAll('.slider-card');
 
 const marginCard = getMarginCard(cards);
 
@@ -174,7 +156,7 @@ function newCards() {
   addNewCards(step, sliderList, position);
 
   setCardsWidth(
-    document.querySelectorAll('.slider-list__card'),
+    document.querySelectorAll('.slider-card'),
     sliderWrapperWidth,
     marginCard,
     step
@@ -191,7 +173,7 @@ arrowRight.addEventListener('click', () => {
   setTimeout(() => {
     deleteExtraCards(
       step,
-      document.querySelectorAll('.slider-list__card'),
+      document.querySelectorAll('.slider-card'),
       position
     ); // удаляем левые карточки
 
@@ -213,7 +195,7 @@ arrowleft.addEventListener('click', () => {
   setTimeout(async () => {
     deleteExtraCards(
       step,
-      document.querySelectorAll('.slider-list__card'),
+      document.querySelectorAll('.slider-card'),
       position
     ); // удаляем правые карточки
 
@@ -226,6 +208,6 @@ arrowleft.addEventListener('click', () => {
   }, 1000);
 });
 
-window.addEventListener('resize', () => {
-  location.reload(); // обновлние страницы для динамической адаптивности слайдера
-});
+// window.addEventListener('resize', () => {
+//   location.reload(); // обновлние страницы для динамической адаптивности слайдера
+// });

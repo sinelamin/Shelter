@@ -4,6 +4,8 @@
 
 import db from '../db.json';
 import { createCard } from './createCard';
+import { disableArrowBtn } from './disableArrowBtn';
+import { enabledArrowBtn } from './enabledArrowBtn';
 
 const renderCards = (parent) => {
   db.cards.forEach(({ img, alt, title, id }) => {
@@ -122,13 +124,13 @@ const getRandomArr = (arr, step) => {
   return randomArr;
 };
 
-const disableArrowBtn = (btn) => {
-  btn.style.pointerEvents = 'none';
-};
+// const disableArrowBtn = (btn) => {
+//   btn.style.pointerEvents = 'none';
+// };
 
-const enabledArrowBtn = (btn) => {
-  btn.style.pointerEvents = 'auto';
-};
+// const enabledArrowBtn = (btn) => {
+//   btn.style.pointerEvents = 'auto';
+// };
 
 renderCards(sliderList);
 

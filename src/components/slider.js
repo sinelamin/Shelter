@@ -8,14 +8,28 @@ import { disableArrowBtn } from './disableArrowBtn';
 import { enabledArrowBtn } from './enabledArrowBtn';
 
 function addSlider() {
-  const renderCards = (parent) => {
-    db.cards.forEach(({ img, alt, title, id }) => {
-      const imgFilename = img;
+  const renderCards = (parent, step) => {
+    for (let i = 0; i < (step * 3); i += 1) {
+      const imgFilename = db.cards[i].img;
 
       const imgHash = require(`../img/${imgFilename}`);
 
-      createCard('slider-card', parent, imgHash, alt, title, id);
-    });
+      createCard(
+        'slider-card',
+        parent,
+        imgHash,
+        db.cards[i].alt,
+        db.cards[i].title,
+        db.cards[i].id
+      );
+    }
+    // db.cards.forEach(({ img, alt, title, id }) => {
+    //   const imgFilename = img;
+
+    //   const imgHash = require(`../img/${imgFilename}`);
+
+    //   createCard('slider-card', parent, imgHash, alt, title, id);
+    // });
   };
 
   const setCardsWidth = (cards, sliderWrapperWidth, marginCard, step) => {
@@ -122,10 +136,11 @@ function addSlider() {
       }
     }
 
+    console.log(randomArr);
     return randomArr;
   };
 
-  renderCards(sliderList);
+  renderCards(sliderList, step);
 
   const slider = document.querySelector('.slider');
   const arrowleft = document.querySelector('.slider-arrow__left');

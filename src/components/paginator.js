@@ -79,11 +79,6 @@ changePosition(positionSlide, navigationCount);
 renderCardsPaginator(paginatorList, startPosition);
 
 btnRight.addEventListener('click', () => {
-  if (positionSlide == stepsPaginator - 1) {
-    disableArrowBtn(btnRight, 'paginator');
-    disableArrowBtn(btnSuperRight, 'paginator');
-  }
-
   positionSlide += 1;
   changePosition(positionSlide, navigationCount);
 
@@ -94,14 +89,14 @@ btnRight.addEventListener('click', () => {
 
   renoveCards(document.querySelectorAll('.paginator-card'));
   renderCardsPaginator(paginatorList, startPosition);
+
+  if (positionSlide == stepsPaginator) {
+    disableArrowBtn(btnRight, 'paginator');
+    disableArrowBtn(btnSuperRight, 'paginator');
+  }
 })
 
 btnLeft.addEventListener('click', () => {
-  if (positionSlide == 2) {
-    disableArrowBtn(btnLeft, 'paginator');
-    disableArrowBtn(btnSuperLeft, 'paginator');
-  }
-
   positionSlide -= 1;
   changePosition(positionSlide, navigationCount);
 
@@ -112,6 +107,11 @@ btnLeft.addEventListener('click', () => {
 
   renoveCards(document.querySelectorAll('.paginator-card'));
   renderCardsPaginator(paginatorList, startPosition);
+
+  if (positionSlide == 1) {
+    disableArrowBtn(btnLeft, 'paginator');
+    disableArrowBtn(btnSuperLeft, 'paginator');
+  }
 })
 
 btnSuperRight.addEventListener('click', () => {

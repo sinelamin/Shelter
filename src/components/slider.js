@@ -66,7 +66,7 @@ const deleteExtraCards = (step, cards, position) => {
   }
 };
 
-const addNewCards = async (step, sliderList, position) => {
+const addNewCards = (step, sliderList, position) => {
 
   let arr = [];
 
@@ -123,14 +123,6 @@ const getRandomArr = (arr, step) => {
 
   return randomArr;
 };
-
-// const disableArrowBtn = (btn) => {
-//   btn.style.pointerEvents = 'none';
-// };
-
-// const enabledArrowBtn = (btn) => {
-//   btn.style.pointerEvents = 'auto';
-// };
 
 renderCards(sliderList);
 
@@ -194,7 +186,7 @@ arrowleft.addEventListener('click', () => {
   sliderList.style.transition = 'transform 1s';
   sliderList.style.transform = `translateX(${position += offset}px)`;
 
-  setTimeout(async () => {
+  setTimeout(() => {
     deleteExtraCards(
       step,
       document.querySelectorAll('.slider-card'),

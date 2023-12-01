@@ -4,3 +4,4 @@ import './index.scss';
 import './components/burger.js';
 import './components/slider.js';
 import './components/paginator.js';
+import './components/popup.js';

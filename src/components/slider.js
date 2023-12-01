@@ -206,6 +206,6 @@ function addSlider() {
 
 
 
-if (`${document.location.pathname.slice(0, -5)}` == '/index') {
+if (`${document.location.pathname.slice(0, -5)}` == '/index' || `${document.location.pathname}` == '/') {
   addSlider();
 };

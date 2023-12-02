@@ -23,13 +23,6 @@ function addSlider() {
         db.cards[i].id
       );
     }
-    // db.cards.forEach(({ img, alt, title, id }) => {
-    //   const imgFilename = img;
-
-    //   const imgHash = require(`../img/${imgFilename}`);
-
-    //   createCard('slider-card', parent, imgHash, alt, title, id);
-    // });
   };
 
   const setCardsWidth = (cards, sliderWrapperWidth, marginCard, step) => {

@@ -30,6 +30,8 @@
 
   .burger {
     display: none;
+    position: relative;
+    z-index: 9;
     width: 30px;
     height: 22px;
     cursor: pointer;
@@ -701,14 +703,6 @@
 
 @media (max-width: 750px) {
   .header {
-    &-menu {
-      position: absolute;
-      top: 0;
-      right: 0;
-      height: 100vh;
-      width: 320px;
-    }
-
     &-menu--active::before {
       content: "";
       position: fixed;
@@ -721,11 +715,7 @@
     }
 
     .burger {
-      position: absolute;
       display: block;
-      z-index: 5;
-      right: 20px;
-      top: 49px;
       transition: transform .4s;
     }
 
@@ -735,14 +725,15 @@
     }
 
     &-list {
-      position: relative;
+      position: absolute;
       z-index: 3;
       top: -100vh;
+      right: 0;
       margin: 0;
       flex-direction: column;
       justify-content: center;
       height: 100%;
-      width: 100%;
+      width: 320px;
       background-color: $btnTextColor;
       transition: top .4s;
     }

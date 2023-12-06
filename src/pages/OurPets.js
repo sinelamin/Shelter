@@ -1,57 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
+'use strict';
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" type="image/x-icon" href="./img/favicon-puppy.svg">
-  <title>Our pets</title>
-</head>
+import { imgObj } from "../components/importImg";
 
-<body>
-  <header class="header header--OurPets">
-    <div class="container">
-      <div class="header-top">
-        <a class="header-logo" href="#">
-          Cozy House
-          <span class="header-logo__sub">
-            Shelter for pets in Boston
-          </span>
-        </a>
+export function pageOurPets() {
+  const body = document.querySelector('body');
 
-        <nav class="header-menu">
-          <div class="burger">
-            <span class="burger__item"></span>
-            <span class="burger__item"></span>
-            <span class="burger__item"></span>
-          </div>
 
-          <ul class="header-list">
-            <li class="header-list__item">
-              <a class="header-list__link" href="./index.html#about">
-                About the shelter
-              </a>
-            </li>
-            <li class="header-list__item">
-              <a class="header-list__link" href="./ourPets.html">
-                Our pets
-              </a>
-            </li>
-            <li class="header-list__item">
-              <a class="header-list__link" href="./index.html#help">
-                Help the shelter
-              </a>
-            </li>
-            <li class="header-list__item">
-              <a class="header-list__link" href="#contacts">
-                Contacts
-              </a>
-            </li>
-          </ul>
+  body.innerHTML = `
+    <header class="header header--OurPets">
+      <div class="container">
+        <div class="header-top">
+          <a class="header-logo" href="/">
+            Cozy House
+            <span class="header-logo__sub">
+              Shelter for pets in Boston
+            </span>
+          </a>
+
+          <nav class="header-menu">
+            <div class="burger">
+              <span class="burger__item"></span>
+              <span class="burger__item"></span>
+              <span class="burger__item"></span>
+            </div>
+            
+            <ul class="header-list">
+              <li class="header-list__item">
+                <a class="header-list__link" href="/">
+                  About the shelter
+                </a>
+              </li>
+              <li class="header-list__item">
+                <a class="header-list__link" href="/ourPets">
+                  Our pets
+                </a>
+              </li>
+              <li class="header-list__item">
+                <a class="header-list__link" href="/#help">
+                  Help the shelter
+                </a>
+              </li>
+              <li class="header-list__item">
+                <a class="header-list__link" href="#contacts">
+                  Contacts
+                </a>
+              </li>
+            </ul>
         </nav>
       </div>
-    </div>
   </header>
 
   <section class="pets pets--ourPets" id="pets">
@@ -66,12 +62,9 @@
         <div class="paginator">
           <div class="paginator-list">
           </div>
-
-
           <div class="paginator-navigation">
             <div class="paginator-btn__superleft">
-              &#60;
-              &#60;
+              &#60;&#60;
             </div>
             <div class="paginator-btn__left">
               &#60;
@@ -83,16 +76,13 @@
               &#62;
             </div>
             <div class="paginator-btn__superright">
-              &#62;
-              &#62;
+              &#62;&#62;
             </div>
           </div>
-
         </div>
       </div>
     </div>
   </section>
-
 
   <footer class="footer" id="contacts">
     <div class="container">
@@ -103,13 +93,13 @@
               For questions and suggestions
             </h3>
             <a class="footer-contacts__link" href="mailto:email@shelter.com">
-              <img class="footer-contacts__icon" src="./img/icon-email.svg" alt="icon-email">
+              <img class="footer-contacts__icon" src="${imgObj.iconEmail}" alt="icon-email">
               <p class="footer-contact__text">
                 email@shelter.com
               </p>
             </a>
             <a class="footer-contacts__link" href="tel:+136745677554">
-              <img class="footer-contacts__icon" src="./img/icon-phone.svg" alt="icon-phone">
+              <img class="footer-contacts__icon" src="${imgObj.iconPhone}" alt="icon-phone">
               <p class="footer-contact__text">
                 +13 674 567 75 54
               </p>
@@ -121,23 +111,22 @@
               We are waiting for your visit
             </h3>
             <div class="footer-adress__item">
-              <img class="footer-adress__icon" src="./img/icon-marker.svg" alt="icon-marker">
+              <img class="footer-adress__icon" src="${imgObj.iconMarker}" alt="icon-marker">
               <p class="footer-adress__text">
                 1 Central Street, Boston (entrance from the store)
               </p>
             </div>
             <div class="footer-adress__item">
-              <img class="footer-adress__icon" src="./img/icon-marker.svg" alt="icon-marker">
+              <img class="footer-adress__icon" src="${imgObj.iconMarker}" alt="icon-marker">
               <p class="footer-adress__text">
                 18 South Park, London
               </p>
             </div>
           </div>
         </div>
-        <img class="footer__img" src="./img/footer-puppy.png" alt="dog-puppy">
+        <img class="footer__img" src="${imgObj.footerPuppy}" alt="dog-puppy">
       </div>
     </div>
   </footer>
-</body>
-
-</html>
+  `
+}

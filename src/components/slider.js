@@ -7,7 +7,7 @@ import { createCard } from './createCard';
 import { disableArrowBtn } from './disableArrowBtn';
 import { enabledArrowBtn } from './enabledArrowBtn';
 
-function addSlider() {
+export function addSlider() {
   const renderCards = (parent, step) => {
     for (let i = 0; i < (step * 3); i += 1) {
       const imgFilename = db.cards[i].img;
@@ -211,9 +211,3 @@ function addSlider() {
     }, 1000);
   });
 }
-
-
-
-if (`${document.location.pathname.slice(0, -5)}` == '/index' || `${document.location.pathname}` == '/') {
-  addSlider();
-};

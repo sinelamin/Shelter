@@ -5,7 +5,7 @@ import { createCard } from './createCard';
 import { disableArrowBtn } from './disableArrowBtn';
 import { enabledArrowBtn } from './enabledArrowBtn';
 
-function addPaginator() {
+export function addPaginator() {
   const paginatorList = document.querySelector('.paginator-list');
 
   const navigationCount = document.querySelector('.paginator-number');
@@ -147,7 +147,3 @@ function addPaginator() {
     renderCardsPaginator(paginatorList, startPosition);
   })
 }
-
-if (`${document.location.pathname.slice(0, -5)}` == '/ourPets') {
-  addPaginator();
-};

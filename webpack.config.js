@@ -15,7 +15,7 @@ module.exports = {
     port: 3000,
     open: true,
     hot: true,
-    historyApiFallback: true
+    historyApiFallback: true // конфигурация позволяет вебпак серверу перенаправлять все запросы на ваше приложение, это позволит page.js обрабатывать маршруты при перезагрузке страницы.
   },
   entry: [
     '@babel/polyfill',

@@ -14,6 +14,9 @@ const home = () => {
   addBurger();
   addPopUp();
   addSlider();
+  window.addEventListener('resize', (e) => {
+    location.reload(); // обновлние страницы для динамической адаптивности
+  });
 };
 
 const ourPets = () => {
@@ -21,6 +24,9 @@ const ourPets = () => {
   addBurger();
   addPopUp();
   addPaginator();
+  window.addEventListener('resize', (e) => {
+    location.reload();
+  });
 };
 
 // // Определение маршрутов

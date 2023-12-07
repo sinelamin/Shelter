@@ -53,11 +53,11 @@ export function addPaginator() {
       return totalCards >= 8 ? 8 : totalCards;
     }
 
-    if (htmlWidth <= 1249 && htmlWidth >= 600) {
+    if (htmlWidth <= 1249 && htmlWidth >= 601) {
       return totalCards >= 6 ? 6 : totalCards;
     }
 
-    if (htmlWidth < 600) {
+    if (htmlWidth < 601) {
       return totalCards >= 3 ? 3 : totalCards;
     }
   }

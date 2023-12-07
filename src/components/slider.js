@@ -1,6 +1,7 @@
 'use strict';
 
-//Infinite random slider
+
+// Бескоунечный слайдер с рандомной подстановкойй карточек
 
 import db from '../db.json';
 import { createCard } from './createCard';
@@ -41,7 +42,7 @@ export function addSlider() {
       value = 2;
     }
 
-    if (htmlWidth > 300 && htmlWidth < 601) {
+    if (htmlWidth > 0 && htmlWidth < 601) {
       value = 1;
     }
 
